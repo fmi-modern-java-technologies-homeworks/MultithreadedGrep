@@ -32,7 +32,7 @@ public class Main {
 		Pattern patternForGrep = (new PatternFactory(flagForIgnoreCase, flagForWord, arguments.getStringToFind()))
 				.getPattern();
 
-		(new MulthithreadedGrep(patternForGrep, arguments.getPathToDirectory(), arguments.getNumberOfThreads(),
+		(new MultithreadedGrep(patternForGrep, arguments.getPathToDirectory(), arguments.getNumberOfThreads(),
 				arguments.getStreamForPrinting())).execute();
 
 		arguments.getStreamForPrinting().close();
